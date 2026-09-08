@@ -30,7 +30,9 @@ def validate_mark(mark: float | int | str) -> float:
     return value
 
 
-def calculate_average(marks: list[float | int | str] | tuple[float | int | str, ...]) -> float:
+def calculate_average(
+    marks: list[float | int | str] | tuple[float | int | str, ...]
+) -> float:
     """Return the average of a non-empty set of marks."""
     values = [validate_mark(mark) for mark in marks]
     if not values:

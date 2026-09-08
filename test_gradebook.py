@@ -1,6 +1,12 @@
 import unittest
 
-from gradebook import Student, assign_grade, build_student, calculate_average, validate_mark
+from gradebook import (
+    Student,
+    assign_grade,
+    build_student,
+    calculate_average,
+    validate_mark,
+)
 
 
 class GradebookTests(unittest.TestCase):
@@ -14,7 +20,10 @@ class GradebookTests(unittest.TestCase):
                 validate_mark(value)
 
     def test_average(self):
-        self.assertAlmostEqual(calculate_average([80, 90, 70]), 80.0)
+        self.assertAlmostEqual(
+            calculate_average([80, 90, 70]),
+            80.0,
+        )
 
     def test_empty_average(self):
         with self.assertRaises(ValueError):

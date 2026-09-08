@@ -1,0 +1,1 @@
+pytest>=8,<9\nflake8>=7,<8\n
